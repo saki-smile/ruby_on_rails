@@ -15,9 +15,17 @@ class User
 
   #ゲッターやセッターを簡単に定義する
   #attr_readerを使うとゲッターだけ attr_writerを使うとセッターだけを定義できる
-  attr_accessor :name, :address, :email
+  # attr_accessor :name, :address, :email
 
-  def profile
-    "#{name} #{address}"
+  # def profile
+  #   "#{name} #{address}"
+  # end
+
+  attr_reader :name, :address, :email
+  def initialize(name, address, email)
+    @name = name
+    @address = address
+    @email = email
   end
+
 end
